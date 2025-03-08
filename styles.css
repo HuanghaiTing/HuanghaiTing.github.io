@@ -1,3 +1,5 @@
+
+
 :root {
     --primary-color: #2563eb;
     --secondary-color: #3b82f6;
@@ -13,8 +15,10 @@
 }
 
 body {
-    background: #f8fafc;
+    background: url("wallpaper/home.png") no-repeat;
     display: flex;
+    background-attachment: fixed;
+    background-size: 100% 100%;
     min-height: 100vh;
 }
 
@@ -246,4 +250,116 @@ section.active-section {
 .contact-item:active::after {
     opacity: 1;
 }
+
+/* 下载列表样式 */
+.download-list {
+    margin-top: 2rem;
+}
+
+
+.download-item {
+    display: flex;
+    align-items: center;
+    padding: 1.2rem;
+    background: #fff;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    transition: all 0.2s ease;
+    border: 1px solid #e2e8f0;
+}
+
+.download-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+}
+
+.download-item i {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-right: 1.5rem;
+    width: 40px;
+}
+
+.file-info {
+    flex: 1;
+    margin-right: 1.5rem;
+}
+
+.file-info h3 {
+    color: #1e293b;
+    margin-bottom: 0.3rem;
+}
+
+.file-date {
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+.file-type.tag {
+    background: #e0f2fe;
+    color: #0ea5e9;
+    margin-right: 1.5rem;
+}
+
+.download-btn {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.download-btn:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .download-item {
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .file-info {
+        flex: 1 1 100%;
+        margin-right: 0;
+    }
+    
+    .download-btn {
+        order: 1;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+
+    @font-face {
+        font-family: "Misans";
+        src: url(MiSans-Regular.ttf);
+    }
+
+   h1{
+        font-family: "Misans";
+    }
+
+    h2{
+        font-family: "Misans";
+    }
+
+    p{
+        font-family: "Misans";
+    }
+
+    h3{
+        font-family: "Misans";
+    }
+
+  
+
 

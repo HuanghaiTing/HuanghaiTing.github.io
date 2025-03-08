@@ -1,10 +1,28 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+    <!--
+#                                                                                                                                          
+#          ,--,                                                                                                                            
+#        ,--.'|                                                    ,---,                           ___                                     
+#     ,--,  | :                                                  ,--.' |                  ,--,   ,--.'|_    ,--,                           
+#  ,---.'|  : '         ,--,                    ,---,            |  |  :                ,--.'|   |  | :,' ,--.'|         ,---,             
+#  |   | : _' |       ,'_ /|                ,-+-. /  |  ,----._,.:  :  :                |  |,    :  : ' : |  |,      ,-+-. /  |  ,----._,. 
+#  :   : |.'  |  .--. |  | :    ,--.--.    ,--.'|'   | /   /  ' /:  |  |,--.  ,--.--.   `--'_  .;__,'  /  `--'_     ,--.'|'   | /   /  ' / 
+#  |   ' '  ; :,'_ /| :  . |   /       \  |   |  ,"' ||   :     ||  :  '   | /       \  ,' ,'| |  |   |   ,' ,'|   |   |  ,"' ||   :     | 
+#  '   |  .'. ||  ' | |  . .  .--.  .-. | |   | /  | ||   | .\  .|  |   /' :.--.  .-. | '  | | :__,'| :   '  | |   |   | /  | ||   | .\  . 
+#  |   | :  | '|  | ' |  | |   \__\/: . . |   | |  | |.   ; ';  |'  :  | | | \__\/: . . |  | :   '  : |__ |  | :   |   | |  | |.   ; ';  | 
+#  '   : |  : ;:  | : ;  ; |   ," .--.; | |   | |  |/ '   .   . ||  |  ' | : ," .--.; | '  : |__ |  | '.'|'  : |__ |   | |  |/ '   .   . | 
+#  |   | '  ,/ '  :  `--'   \ /  /  ,.  | |   | |--'   `---`-'| ||  :  :_:,'/  /  ,.  | |  | '.'|;  :    ;|  | '.'||   | |--'   `---`-'| | 
+#  ;   : ;--'  :  ,      .-./;  :   .'   \|   |/       .'__/\_: ||  | ,'   ;  :   .'   \;  :    ;|  ,   / ;  :    ;|   |/       .'__/\_: | 
+#  |   ,/       `--`----'    |  ,     .-./'---'        |   :    :`--''     |  ,     .-./|  ,   /  ---`-'  |  ,   / '---'        |   :    : 
+#  '---'                      `--`---'                  \   \  /            `--`---'     ---`-'            ---`-'                \   \  /  
+#                                                        `--`-'                                                                   `--`-'   
+-->
     <link rel="stylesheet" type="text/css" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>开发者日志 | TechBlog</title>
+    <title>婷婷的blog</title>
     <!-- Font Awesome 图标 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
@@ -22,7 +40,7 @@
             <div class="brand-icon">
                 <i class="fas fa-code"></i>
             </div>
-            <h1 class="text-gradient">DevLog</h1>
+            <h1 class="text-gradient">Code</h1>
         </div>
 
         <nav class="nav-links">
@@ -39,15 +57,22 @@
                 <i class="fas fa-envelope"></i>
                 联系
             </a>
+
+            <a href="#download" class="nav-item">
+                <i class="fas fa-download"></i>
+                下载
+            </a>
         </nav>
     </aside>
 
-    <main class="main-content">
-        <section id="posts" class="active-section">
-            <article class="post-card">
-                <h2 class="text-gradient">现代前端开发实践</h2>
+<!-- 在main标签内调整结构，将所有内容包裹在对应的section中 -->
+<main class="main-content">
+    <!-- 将所有文章内容移动到posts section中 -->
+    <section id="posts" class="active-section">
+        <article class="post-card">
+            <h2 class="text-gradient">现代前端开发实践</h2>
                 <div class="post-meta">
-                    <span><i class="fas fa-calendar-alt"></i> 2024年3月15日</span>
+                    <span><i class="fas fa-calendar-alt"></i> 2025年3月9日</span>
                     <span class="tag">JavaScript</span>
                     <span class="tag">React</span>
                 </div>
@@ -73,43 +98,90 @@ function Counter() {
     );
 }
                 </code></pre>
-            </article>
-        </section>
 
-        <section id="about">
-            <article class="post-card">
-                <h2 class="text-gradient">关于我</h2>
-                <p>一名13岁的初中生,没有什么好说的o_o ....</p>
-            </article>
-        </section>
+        </article>
 
-      <!-- 修改联系版块内容 -->
-<section id="contact">
-    <article class="post-card">
-        <h2 class="text-gradient">联系</h2>
-        <div class="contact-list">
-            <div class="contact-item" data-content="huangtingqaq@outlook.com">
-                <i class="fas fa-envelope"></i>
-                <span>主邮箱：huangtingqaq@outlook.com</span>
-                <div class="copied-tip">已复制!</div>
+        <article class="post-card">
+            <h2 class="text-gradient">建站成功!</h2>
+            <div class="post-meta">
+                <span><i class="fas fa-calendar-alt"></i> 2025年3月8日</span>
+                <span class="tag">纪念</span>
+                <span class="tag">网站</span>
             </div>
-            
-            <div class="contact-item" data-content="1497145487@qq.com">
-                <i class="fas fa-envelope-open"></i>
-                <span>备用邮箱：1497145487@qq.com</span>
-                <div class="copied-tip">已复制!</div>
+                <h1>我的第一个博客网站</h1>
+                <p>分享有趣的事，记录生活，喜欢科技,热爱数码</p>
+                <p>这是我瞎写的</p>
+                <img src="jietu/c40ddc1c-4d65-4aa1-abbe-3d22845bc4d1.png"width="1000">
             </div>
 
-            <div class="contact-item" data-content="1497145487">
-                <i class="fab fa-qq"></i>
-                <span>QQ：1497145487</span>
-                <div class="copied-tip">已复制!</div>
+        </article>
+
+        <article class="post-card">
+            <h2 class="text-gradient">我的世界真好玩</h2>
+            <div class="post-meta">
+                <span><i class="fas fa-calendar-alt"></i>2025年1月13日</span>
+                <span class="tag">Minecraft</span>
+                <span class="tag">我的世界</span>
             </div>
-        </div>
-    </article>
+            <h2>我的世界我盖的房子，高级火柴盒＞﹏＜</h2>
+            <img src="jietu/2025-01-13_23.59.13.png"width="1000">
+        </article>
+   
+
+        <article class="post-card">
+            <h2 class="text-gradient">2025年新年快乐!</h2>
+            <div class="post-meta">
+                <span><i class="fas fa-calendar-alt"></i> 2024年12月31日</span>
+                <span class="tag">纪念</span>
+                <span class="tag">精彩瞬间</span>
+                <span class="tag">2025年</span>
+                </div>
+                <h2>时间过得真快啊</h2>
+                <img src="jietu/493a09e960cd78c16c6d7d0ab10f6845.png">
+            </div>
+        </article>
+    </section>
+    <!-- 其他section保持不变 -->
+    <section id="about">
+        <article class="post-card">
+            <h2 class="text-gradient">关于我</h2>
+            <h1>一名13岁的初中生,自学IT,喜欢数码产品，钻研硬件，偶尔也会玩玩游戏,组装电脑。</h1>
+        </article>
+    </section>
+
+    <section id="contact">
+        <article class="post-card">
+            <h2 class="text-gradient">联系</h2>
+            <div class="contact-list">
+                <div class="contact-item" data-content="huangtingqaq@outlook.com">
+                    <i class="fas fa-envelope"></i>
+                    <span>主邮箱：huangtingqaq@outlook.com</span>
+                    <div class="copied-tip">已复制!</div>
+                </div>
+                
+                <div class="contact-item" data-content="1497145487@qq.com">
+                    <i class="fas fa-envelope-open"></i>
+                    <span>备用邮箱：1497145487@qq.com</span>
+                    <div class="copied-tip">已复制!</div>
+                </div>
+    
+                <div class="contact-item" data-content="1497145487">
+                    <i class="fab fa-qq"></i>
+                    <span>QQ：1497145487</span>
+                    <div class="copied-tip">已复制!</div>
+                </div>
+            </div>
+        </article>
+    
+    </section>
+</main>
+
+<section id="download">
+    
 </section>
-    </main>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
     <script>
         // 侧边栏切换
 function toggleSidebar() {
@@ -118,23 +190,27 @@ function toggleSidebar() {
     sidebar.style.transform = isHidden ? 'translateX(0px)' : 'translateX(-100%)';
 }
 
-// 页面切换逻辑
+// 修改页面切换逻辑
 document.querySelectorAll('.nav-item').forEach(item => {
     item.addEventListener('click', function(e) {
         e.preventDefault();
-        // 移除所有导航项的 active 类
+        
+        // 切换导航激活状态
         document.querySelectorAll('.nav-item').forEach(nav => 
             nav.classList.remove('active'));
-        // 为当前点击的导航项添加 active 类
         this.classList.add('active');
         
-        // 获取目标 section 的 ID
+        // 获取目标section
         const targetId = this.getAttribute('href');
-        // 隐藏所有 section
-        document.querySelectorAll('section').forEach(section => 
-            section.classList.remove('active-section'));
-        // 显示目标 section
-        document.querySelector(targetId).classList.add('active-section');
+        const targetSection = document.querySelector(targetId);
+
+        // 隐藏所有section
+        document.querySelectorAll('main > section').forEach(section => {
+            section.classList.remove('active-section');
+        });
+
+        // 显示目标section
+        targetSection.classList.add('active-section');
     });
 });
 
