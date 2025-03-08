@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>开发者日志 | TechBlog</title>
+    <!-- Font Awesome 图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+
+</head>
+<body>
+    <button class="menu-toggle" onclick="toggleSidebar()">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-icon">
+                <i class="fas fa-code"></i>
+            </div>
+            <h1 class="text-gradient">DevLog</h1>
+        </div>
+
+        <nav class="nav-links">
+            
+            <a href="#about" class="nav-item">
+                <i class="fas fa-user"></i>
+                关于我
+            </a>
+            <a href="#posts" class="nav-item">
+                <i class="fas fa-feather"></i>
+                所有文章
+            </a>
+            <a href="#contact" class="nav-item">
+                <i class="fas fa-envelope"></i>
+                联系
+            </a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <section id="posts" class="active-section">
+            <article class="post-card">
+                <h2 class="text-gradient">现代前端开发实践</h2>
+                <div class="post-meta">
+                    <span><i class="fas fa-calendar-alt"></i> 2024年3月15日</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">React</span>
+                </div>
+                <p>探讨现代前端开发中的最佳实践和新兴技术...</p>
+                <pre><code class="language-javascript">
+// 现代React组件示例
+import { useState, useEffect } from 'react';
+
+function Counter() {
+    const [count, setCount] = useState(0);
+
+    useEffect(() => {
+        document.title = `点击次数: ${count}`;
+    }, [count]);
+
+    return (
+        &lt;div&gt;
+            &lt;p&gt;当前计数: {count}&lt;/p&gt;
+            &lt;button onClick={() => setCount(count + 1)}&gt;
+                增加
+            &lt;/button&gt;
+        &lt;/div&gt;
+    );
+}
+                </code></pre>
+            </article>
+        </section>
+
+        <section id="about">
+            <article class="post-card">
+                <h2 class="text-gradient">关于我</h2>
+                <p>一名13岁的初中生,没有什么好说的o_o ....</p>
+            </article>
+        </section>
+
+      <!-- 修改联系版块内容 -->
+<section id="contact">
+    <article class="post-card">
+        <h2 class="text-gradient">联系</h2>
+        <div class="contact-list">
+            <div class="contact-item" data-content="huangtingqaq@outlook.com">
+                <i class="fas fa-envelope"></i>
+                <span>主邮箱：huangtingqaq@outlook.com</span>
+                <div class="copied-tip">已复制!</div>
+            </div>
+            
+            <div class="contact-item" data-content="1497145487@qq.com">
+                <i class="fas fa-envelope-open"></i>
+                <span>备用邮箱：1497145487@qq.com</span>
+                <div class="copied-tip">已复制!</div>
+            </div>
+
+            <div class="contact-item" data-content="1497145487">
+                <i class="fab fa-qq"></i>
+                <span>QQ：1497145487</span>
+                <div class="copied-tip">已复制!</div>
+            </div>
+        </div>
+    </article>
+</section>
+    </main>
+
+    <script>
+        // 侧边栏切换
+function toggleSidebar() {
+    const sidebar = document.querySelector('.sidebar');
+    const isHidden = sidebar.style.transform === 'translateX(-100%)' || sidebar.style.transform === '';
+    sidebar.style.transform = isHidden ? 'translateX(0px)' : 'translateX(-100%)';
+}
+
+// 页面切换逻辑
+document.querySelectorAll('.nav-item').forEach(item => {
+    item.addEventListener('click', function(e) {
+        e.preventDefault();
+        // 移除所有导航项的 active 类
+        document.querySelectorAll('.nav-item').forEach(nav => 
+            nav.classList.remove('active'));
+        // 为当前点击的导航项添加 active 类
+        this.classList.add('active');
+        
+        // 获取目标 section 的 ID
+        const targetId = this.getAttribute('href');
+        // 隐藏所有 section
+        document.querySelectorAll('section').forEach(section => 
+            section.classList.remove('active-section'));
+        // 显示目标 section
+        document.querySelector(targetId).classList.add('active-section');
+    });
+});
+
+// 添加复制功能
+document.querySelectorAll('.contact-item').forEach(item => {
+    item.addEventListener('click', function() {
+        const content = this.dataset.content;
+        const tip = this.querySelector('.copied-tip');
+        
+        // 复制到剪贴板
+        navigator.clipboard.writeText(content).then(() => {
+            tip.classList.add('show');
+            setTimeout(() => tip.classList.remove('show'), 1500);
+        }).catch(err => {
+            console.error('复制失败:', err);
+        });
+    });
+});
+    </script>
+</body>
+</html>
