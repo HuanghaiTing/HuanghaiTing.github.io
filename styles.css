@@ -23,7 +23,7 @@ html, body {
 }
 
 body {
-    background: url("wallpaper/home.png") no-repeat fixed;
+    background: url("wallpaper/wallpaper.jpg") no-repeat fixed;
     /* 更推荐的等比例填充方式 */
     background-size: cover;
     /* 或者用这个绝对填充（可能拉伸图片） */
@@ -267,6 +267,28 @@ section.active-section {
 .contact-item:active::after {
     opacity: 1;
 }
+
+@font-face {
+    font-family: "1";
+    src: url(MiSans-Regular.ttf);
+}
+
+h1{
+    font-family: "1";
+}
+
+h2{
+    font-family: "1";
+}
+
+h3{
+    font-family: "1";
+}
+
+p{
+    font-family: "1";
+}
+
 
 /* 下载列表样式 */
 .download-list {
