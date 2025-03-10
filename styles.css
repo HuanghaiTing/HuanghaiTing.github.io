@@ -112,7 +112,43 @@ body {
     margin-bottom: 2rem;
     box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
     transition: transform 0.2s ease;
+    max-width: 100%; /* 确保卡片不会超出父容器 */
+    overflow: hidden; /* 防止内容溢出 */
 }
+
+.post-card img {
+    max-width: 100%; /* 图片最大宽度为容器的宽度 */
+    height: auto; /* 高度自适应 */
+    border-radius: 8px; /* 可选：添加圆角 */
+    margin-bottom: 1rem; /* 可选：添加底部间距 */
+}
+
+.post-card p, .post-card h1, .post-card h2 {
+    word-wrap: break-word; /* 允许长单词或URL换行 */
+    overflow-wrap: break-word; /* 同上，兼容性更好 */
+    margin-bottom: 1rem; /* 可选：添加底部间距 */
+}
+
+@media (max-width: 768px) {
+    .post-card {
+        padding: 1rem; /* 在小屏幕上减少内边距 */
+    }
+
+    .post-card img {
+        max-width: 100%; /* 确保图片在小屏幕上不溢出 */
+    }
+}
+
+.main-content {
+    margin-left: var(--sidebar-width);
+    padding: 2rem;
+    width: calc(100% - var(--sidebar-width));
+    max-width: 100vw; /* 确保内容不超出视口宽度 */
+    box-sizing: border-box;
+    overflow-x: hidden; /* 防止水平滚动 */
+}
+
+
 
 .post-card:hover {
     transform: translateY(-3px);
@@ -154,21 +190,26 @@ body {
     }
 }
 
-/* 代码块样式 */
 pre {
     background: #0f172a;
     padding: 1.5rem;
     border-radius: 8px;
     margin: 1.5rem 0;
-    overflow-x: auto;
+    overflow-x: auto; /* 允许水平滚动 */
     color: white;
+    max-width: 100%; /* 防止代码块溢出 */
 }
 
 code {
     font-family: 'Fira Code', monospace;
     font-size: 0.9rem;
+    white-space: pre-wrap; /* 允许代码换行 */
 }
 
+.post-card > div {
+    max-width: 100%; /* 确保内部 div 不溢出 */
+    overflow: hidden; /* 防止内容溢出 */
+}
 /* 工具类 */
 .text-gradient {
     background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
